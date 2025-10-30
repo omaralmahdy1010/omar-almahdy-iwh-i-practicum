@@ -2,18 +2,21 @@ doctype html
 html
   head
     title= title
+    link(rel="stylesheet", href="/style.css")
   body
     h1= title
-    a(href="/update-cobj") Add a new Pet
-    table(border="1")
+    a.button(href="/update-cobj") Add New Pet
+    table
       thead
         tr
+          th ID
           th Name
-          th Bio
           th Type
+          th Bio
       tbody
         each record in records
           tr
+            td= record.id
             td= record.properties.name
-            td= record.properties.bio
             td= record.properties.type
+            td= record.properties.bio
