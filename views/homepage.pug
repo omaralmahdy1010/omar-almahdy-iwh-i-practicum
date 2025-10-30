@@ -8,13 +8,12 @@ html
     table(border="1")
       thead
         tr
-          th ID
           th Name
           th Bio
           th Type
       tbody
         each record in records
           tr
-            td= record.properties.pet_name
-            td= record.properties.pet_bio
-            td= record.properties.pet_type
+            td= record.properties.name
+            td= record.properties.bio
+            td= record.properties.type
